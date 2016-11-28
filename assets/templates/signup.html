@@ -1,0 +1,34 @@
+<div class="container" ng-controller="signupCtrl">
+    <div class="jumbotron">Signup form</h1>
+        <br>
+        <div id="signup-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Name" ng-model="formData.name">
+                        <input type="email" class="form-control input-lg text-center" placeholder="Email" ng-model="formData.email">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Password" ng-model="formData.password">
+
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-lg" ng-click="addUser()">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="user-list" class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="checkbox" ng-repeat="todo in todos">
+
+                <table>
+                    <tr ng-repeat="user in users">
+                      <td style="padding-right:10px;">{{ user.name }}</td>
+                      <td style="padding-right:10px;">{{ user.email }}</td>
+                      <td style="padding-right:10px;">{{ user.pass }}</td>
+                      <td><a ng-click="editUser(user)">edit</a>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -17,6 +17,7 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
+  './node_modules/bootstrap/dist/css/bootstrap.css',
   'styles/**/*.css'
 ];
 
@@ -34,6 +35,11 @@ var jsFilesToInject = [
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js'
+  '/node_modules/jquery/dist/jquery.js',
+  '/node_modules/angular/angular.js',
+  '/node_modules/angular-route/angular-route.js',
+  '/node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js',
+  '/node_modules/bootstrap/dist/js/bootstrap.js',
 ];
 
 
@@ -83,5 +89,3 @@ module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPat
   }
   return require('path').join('assets/',tplPath);
 });
-
-
